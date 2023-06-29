@@ -16,7 +16,7 @@ sys.path.insert(0, '/Users/Daniel/Documents/Research Projects/Cosmic Filaments/e
 import read_fils as rf #imports functions created by Janvi Madhani for use in plotting filaments from dict
 
 sys.path.insert(0, '/Users/Daniel/Documents/Research Projects/Cosmic Filaments/Filament_Metrics' )
-import fil_metrics as fm #imports functions created by Daniel in filament metrics and properties
+import fil_metrics.metric_functions as fm #imports functions created by Daniel in filament metrics and properties
 
 skeleton_file_dm = '/Users/Daniel/Documents/Research Projects/Cosmic Filaments/example_filaments/del_galaxy.NDnet_s5.up.NDskl.BRK.a.NDskl'
 filaments_dm = rf.ReadFilament(skeleton_file_dm)
@@ -69,6 +69,7 @@ x,y,z = fm.cp_plotter(bi_points) ; ax.scatter(x,y,z, label = 'Bi. Points', s = 1
 #x,y,z = myfunctions.cp_plotter(real_saddles) ; ax.scatter(x,y,z, label = 'Saddles (no boundary)', s = 40, alpha = 0.4, c = 'darkturquoise')
 x,y,z = fm.cp_plotter(saddles_nfils) ; ax.scatter(x,y,z, label = 'Saddles w/ nfils=2', s = 40, alpha = 0.4, c = 'darkturquoise')
 
+ax.set_xlabel('X') ; ax.set_ylabel('Y') ; ax.set_zlabel('Z')
 ax.legend()
 extent = 10
 ax.set_xlim(-extent,extent)
