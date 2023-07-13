@@ -10,9 +10,9 @@ import pandas as pd
 matplotlib.rcParams['font.family'] = [ 'serif']
 matplotlib.rcParams['agg.path.chunksize'] = 10000
 import sys  
-sys.path.insert(0, '/Users/zaraafrooz/Desktop/filament_work_zara/example_filaments') #### this needs to be the path leading to Janvi's example_filaments file
+sys.path.insert(0, '/Users/zaraafrooz/Desktop/Cosmic_Filaments_AstroCom/filament_work_zara/example_filaments')
 import read_fils as rf
-skeleton_file_dm = '/Users/zaraafrooz/Desktop/filament_work_zara/example_filaments/del_galaxy.NDnet_s5.up.NDskl.BRK.a.NDskl'
+skeleton_file_dm = '/Users/zaraafrooz/Desktop/Cosmic_Filaments_AstroCom/filament_work_zara/GAMA_filaments/GAMA_tess.NDnet_s5.up.NDskl.S002.BRK.ASMB.rmO.rmB.a.NDskl'
 filaments_dm = rf.ReadFilament(skeleton_file_dm)
 filament_dm_dict = filaments_dm.filament_dict
 
